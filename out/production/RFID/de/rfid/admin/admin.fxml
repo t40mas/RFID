@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="930.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.rfid.admin.Controller">
+    <children>
+        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="125.0" layoutX="230.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true" scaleX="3.0" scaleY="3.0" />
+        <TableView fx:id="tableView" layoutX="600.0" prefHeight="720.0" prefWidth="681.0">
+            <columns>
+                <TableColumn prefWidth="81.0" resizable="false" style="-fx-alignment: baseline-center" text="Image">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="imageView" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="132.0" resizable="false" style="-fx-alignment: baseline-center" text="Surname">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="surname" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="155.0" resizable="false" style="-fx-alignment: baseline-center" text="First name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="165.0" resizable="false" style="-fx-alignment: baseline-center" text="UID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="uid" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="147.0" resizable="false" style="-fx-alignment: baseline-center" text="Rights">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="rights" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="takePicture" layoutX="198.0" layoutY="487.0" mnemonicParsing="false" text="Take picture and get UID" />
+        <TextField fx:id="surname" layoutX="87.0" layoutY="540.0" />
+        <TextField fx:id="firstName" layoutX="87.0" layoutY="574.0" />
+      <TextField fx:id="rights" layoutX="87.0" layoutY="608.0" />
+        <Label layoutX="17.0" layoutY="545.0" text="Surname" />
+        <Label layoutX="17.0" layoutY="579.0" text="First name" />
+      <Button fx:id="saveButton" layoutX="14.0" layoutY="647.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" text="Save" />
+      <Label layoutX="17.0" layoutY="613.0" text="Rights" />
+      <Button fx:id="deleteButton" layoutX="87.0" layoutY="647.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" text="Delete" />
+      <Label layoutX="269.0" layoutY="613.0" text="UID" />
+      <TextField fx:id="uid" layoutX="300.0" layoutY="608.0" />
+      <ToggleButton fx:id="activateRecognizing" layoutX="411.0" layoutY="647.0" mnemonicParsing="false" text="Activate recognition mode" />
+      <Label fx:id="lastLogin" alignment="CENTER" layoutX="374.0" layoutY="805.0" prefHeight="16.0" prefWidth="532.0" text="Last login">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="lastLoginImageView" fitHeight="150.0" fitWidth="125.0" layoutX="238.0" layoutY="754.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

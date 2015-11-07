@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.rfid.gui.Controller">
+    <children>
+        <Button fx:id="buttonRead" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Read" />
+        <TableView fx:id="tableView" layoutX="14.0" layoutY="123.0" prefHeight="631.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="123.0">
+            <columns>
+                <TableColumn prefWidth="100.0" resizable="false" style="-fx-alignment: baseline-center" text="Sector">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="sector" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="414.0" resizable="false" style="-fx-alignment: baseline-center" text="Data">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="data" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="463.0" resizable="false" style="-fx-alignment: baseline-center" text="String">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dataString" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Label layoutX="79.0" layoutY="91.0" prefHeight="16.0" prefWidth="65.0" text="Card UID:" />
+        <Label fx:id="labelUID" layoutX="150.0" layoutY="91.0" prefHeight="16.0" prefWidth="115.0" text="########" />
+        <Button fx:id="buttonWrite" layoutX="227.0" layoutY="86.0" mnemonicParsing="false" text="Write" />
+        <TextField fx:id="textFieldWriteData" alignment="CENTER" layoutX="321.0" layoutY="86.0" prefHeight="26.0" prefWidth="275.0" text="00000000000000000000000000000000" />
+        <TextField fx:id="textFieldWriteSector" alignment="CENTER" layoutX="281.0" layoutY="86.0" prefHeight="26.0" prefWidth="34.0" text="1" />
+        <Label fx:id="labelHexLength" layoutX="679.0" layoutY="91.0" prefHeight="16.0" prefWidth="19.0" text="32" />
+        <Label layoutX="606.0" layoutY="91.0" prefHeight="16.0" prefWidth="73.0" text="Hex length:" />
+        <Button fx:id="buttonConnect" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Connect" />
+        <TextField fx:id="textFieldIP" alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="26.0" prefWidth="146.0" text="192.168.100.102" />
+        <Label layoutX="244.0" layoutY="19.0" prefHeight="16.0" prefWidth="42.0" text="Status" />
+        <Circle fx:id="circleStatus" fill="RED" layoutX="298.0" layoutY="27.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+        <TextField fx:id="textFieldText" alignment="CENTER" layoutX="321.0" layoutY="54.0" prefHeight="26.0" prefWidth="275.0" />
+        <Button fx:id="buttonConvertTextToHex" layoutX="606.0" layoutY="54.0" mnemonicParsing="false" text="Convert" />
+        <Button fx:id="buttonDisconnect" layoutX="881.0" layoutY="14.0" mnemonicParsing="false" text="Disconnect" />
+    </children>
+</AnchorPane>
